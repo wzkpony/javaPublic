@@ -7,7 +7,7 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:/applicationContext.xml</param-value>
+    <param-value>classpath:/spring.xml</param-value>
   </context-param>
   <!-- 配置spring的监听器，用来监听加载spring的主配置文件 -->
   <listener>

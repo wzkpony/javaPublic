@@ -56,6 +56,7 @@
       <artifactId>spring-webmvc</artifactId>
       <version>4.3.7.RELEASE</version>
     </dependency>
+
     <!--mybaites配置-->
     <dependency>
       <groupId>mysql</groupId>
@@ -73,6 +74,14 @@
       <artifactId>mybatis</artifactId>
       <version>3.2.3</version>
     </dependency>
+
+      <!--数据库jar包-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
+
     <!--其他jar包-->
     <dependency>
       <groupId>commons-dbcp</groupId>
