@@ -5,6 +5,16 @@
 
     <select id="selectusermapper" resultType="UserInfo"> SELECT * FROM user </select>
 
+    <!--<select id="selectusermapper" resultType="UserInfo"> SELECT * FROM user WHERE </select>-->
+
+    <select id="selectusermapperForLogin" resultType="UserInfo" parameterType="String">
+       SELECT  * FROM  user WHERE name =#{name} AND pwd = #{pwd}
+    </select>
+
+    <insert id="insertUser"  parameterType="String">
+         INSERT INTO user (name, pwd,age,sex,idcard) VALUES (#{name}, #{pwd},#{age},#{sex},#{idcard});
+    </insert>
+
 
 </mapper>
 
