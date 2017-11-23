@@ -196,7 +196,7 @@
     <view id="67" parent="2" name="VIEWS">
       <System>1</System>
     </view>
-    <table id="68" parent="6" name=" TimeCard"/>
+    <table id="68" parent="6" name=" timecard"/>
     <table id="69" parent="6" name="user"/>
     <column id="70" parent="7" name="CHARACTER_SET_NAME">
       <Position>1</Position>
@@ -3063,66 +3063,71 @@
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="681" parent="68" name="state">
+    <column id="681" parent="68" name="time">
       <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="682" parent="68" name="state">
+      <Position>7</Position>
       <Comment>签卡状态</Comment>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="682" parent="68" name="limits">
-      <Position>7</Position>
+    <column id="683" parent="68" name="limits">
+      <Position>8</Position>
       <Comment>权限，职能职位不同，权限不同</Comment>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="683" parent="68" name="location">
-      <Position>8</Position>
+    <column id="684" parent="68" name="location">
+      <Position>9</Position>
       <Comment>地理位置</Comment>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="684" parent="68" name="signType">
-      <Position>9</Position>
+    <column id="685" parent="68" name="signType">
+      <Position>10</Position>
       <Comment>上班或者是下班</Comment>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="685" parent="68" name="PRIMARY">
+    <key id="686" parent="68" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="686" parent="69" name="id">
+    <column id="687" parent="69" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="687" parent="69" name="name">
+    <column id="688" parent="69" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="688" parent="69" name="pwd">
+    <column id="689" parent="69" name="pwd">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="689" parent="69" name="age">
+    <column id="690" parent="69" name="age">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="690" parent="69" name="sex">
+    <column id="691" parent="69" name="sex">
       <Position>5</Position>
       <DataType>char(1)|0</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="691" parent="69" name="idcard">
+    <column id="692" parent="69" name="idcard">
       <Position>6</Position>
       <DataType>varchar(45)|0</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <key id="692" parent="69" name="PRIMARY">
+    <key id="693" parent="69" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

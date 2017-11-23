@@ -34,7 +34,7 @@ public class CardRecord {
         String location = mapTimeCard.get("location").toString();
         int signType = Integer.valueOf(mapTimeCard.get("signType").toString()).intValue();
 
-        cardRecordImp.insertTimeCrad(userid,years,months,days,state,limits,location,signType);
+        cardRecordImp.insertTimeCrad(userid,state,limits,location,signType);
         map_.put("mas","已签到");
         return map_;
     }
