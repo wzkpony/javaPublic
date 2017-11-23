@@ -13,12 +13,6 @@ public class CardRecordImp {
     public void insertTimeCrad(int userid, int state,String limits,String location,int signType)
     {
 
-
-        String years = "";
-        String months = "";
-        String days = "";
-        String time = "";
-
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         java.util.Date date=new java.util.Date();
         String str=sdf.format(date);
