@@ -7,6 +7,7 @@ public interface CardRecordMapper {
                                  @Param("years") String years,
                                  @Param("months") String  months,
                                  @Param("days") String days,
+                                 @Param("time") String time,
                                  @Param("state") int state,
                                  @Param("limits") String limits,
                                  @Param("location") String location,

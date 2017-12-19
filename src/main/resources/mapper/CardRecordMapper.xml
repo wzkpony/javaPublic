@@ -5,8 +5,9 @@
 
     <insert id="insertCardRecord">
 
-        INSERT INTO  db_test.` timecard` (userid, years,months,days,state,limits,location,signType) VALUES (#{userid},
-        #{years},#{months},#{days},#{state},#{limits},#{location},#{signType});
+        INSERT INTO  db_test.` timecard` (userid, years,months,days,time,state,limits,location,signType) VALUES
+        (#{userid},
+        #{years},#{months},#{days},#{time},#{state},#{limits},#{location},#{signType});
     </insert>
 
 

@@ -1,6 +1,7 @@
 package service.serviceimp;
 
 import java.text.SimpleDateFormat;
+import java.util.List;
 import mapper.CardRecordMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,18 +14,33 @@ public class CardRecordImp {
     public void insertTimeCrad(int userid, int state,String limits,String location,int signType)
     {
 
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         java.util.Date date=new java.util.Date();
         String str=sdf.format(date);
+
+        String[] dateTime = str.split(" ");
 
         String years = "";
         String months = "";
         String days = "";
         String time = "";
-//        2017-11-22 10:40:35
+
+        if (dateTime.length > 1)
+        {
+
+            time = dateTime[1];
+            String date_ = dateTime[0];
+            String[] dateArray = date_.split("-");
+            if (dateArray.length>2)
+            {
+                years = dateArray[0];
+                months = dateArray[1];
+                days = dateArray[2];
+            }
+        }
 
 
-        cardRecordmap.insertCardRecord(userid,years,months,days,state,limits,location,signType);
+        cardRecordmap.insertCardRecord(userid,years,months,days,time,state,limits,location,signType);
 
     }
 }

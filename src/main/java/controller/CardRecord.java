@@ -15,6 +15,7 @@ public class CardRecord {
 
     /**
      *签卡
+     * CardRecordid就是@service的id，必须一致
      */
     @Resource(name = "CardRecordid")
     private CardRecordImp cardRecordImp;
@@ -25,14 +26,11 @@ public class CardRecord {
     {
         Map<String, Object> map_ = new HashMap<String, Object>();
 
-        int userid = Integer.valueOf(mapTimeCard.get("userid").toString()).intValue();
-        String years = mapTimeCard.get("years").toString();
-        String months = mapTimeCard.get("months").toString();
-        String days = mapTimeCard.get("days").toString();
-        int state = Integer.valueOf(mapTimeCard.get("state").toString()).intValue();
+        int userid = Integer.parseInt(mapTimeCard.get("userid").toString());
+        int state = Integer.parseInt(mapTimeCard.get("state").toString());
         String limits = mapTimeCard.get("limits").toString();
         String location = mapTimeCard.get("location").toString();
-        int signType = Integer.valueOf(mapTimeCard.get("signType").toString()).intValue();
+        int signType = Integer.parseInt(mapTimeCard.get("signType").toString());
 
         cardRecordImp.insertTimeCrad(userid,state,limits,location,signType);
         map_.put("mas","已签到");
