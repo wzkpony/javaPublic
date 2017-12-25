@@ -1,10 +1,8 @@
 package service.serviceimp;
 
-import java.net.URI;
 import java.util.List;
-import mapper.testmapper;
+import mapper.UserMapper;
 import model.UserInfo;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import service.SelectUser;
@@ -13,7 +11,7 @@ import service.SelectUser;
 public class SelectUserImp implements SelectUser {
 
     @Autowired
-    private testmapper testmap;
+    private UserMapper testmap;
     public List<UserInfo>getSelectUser()
     {
         return testmap.selectusermapper();

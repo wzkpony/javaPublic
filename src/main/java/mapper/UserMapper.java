@@ -5,7 +5,7 @@ import java.util.List;
 import model.UserInfo;
 import org.apache.ibatis.annotations.Param;
 
-public interface testmapper {
+public interface UserMapper {
 
 public List<UserInfo> selectusermapper();
 

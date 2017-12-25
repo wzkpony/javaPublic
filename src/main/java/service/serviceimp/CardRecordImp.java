@@ -1,8 +1,7 @@
 package service.serviceimp;
 
 import java.text.SimpleDateFormat;
-import java.util.List;
-import mapper.CardRecordMapper;
+import mapper.SignCardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class CardRecordImp {
 
     @Autowired
-    private CardRecordMapper cardRecordmap;
+    private SignCardMapper cardRecordmap;
     public void insertTimeCrad(int userid, int state,String limits,String location,int signType)
     {
 

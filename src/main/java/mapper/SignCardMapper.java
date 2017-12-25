@@ -2,7 +2,7 @@ package mapper;
 
 import org.apache.ibatis.annotations.Param;
 
-public interface CardRecordMapper {
+public interface SignCardMapper {
     public void insertCardRecord(@Param("userid") int userid,
                                  @Param("years") String years,
                                  @Param("months") String  months,
