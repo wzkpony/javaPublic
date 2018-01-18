@@ -40,7 +40,7 @@ public class login {
 
         Map<String, Object> map = new HashMap<String, Object>();
         if (userinfo == null) {
-            map.put(ControllerConfig.result, "2");
+            map.put(ControllerConfig.result, "0");
             map.put(ControllerConfig.mas, "用户不存在");
             return map; //封装为json返回给客户端
         }
@@ -95,7 +95,7 @@ public class login {
 
 
         } else {
-            map_.put(ControllerConfig.result, "2");
+            map_.put(ControllerConfig.result, "0");
             map_.put(ControllerConfig.mas, "该用户已存在");
 
             return map_;

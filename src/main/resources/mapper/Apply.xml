@@ -5,9 +5,9 @@
 
     <insert id="intsertApply">
     INSERT INTO apply
-    (userid,applystate,`type`,state,`name`,auditid,
-    auditname,committime,begintime,endtime,reason,
-    `interval`,receiverid,receivername,applycode)
+    (userid,applyState,`type`,state,`name`,auditid,
+    auditName,commitTime,beginTime,endTime,reason,
+    `interval`,receiverid,receiverName,applyCode)
     VALUES
     (#{userid},#{applyState},#{type},#{state},#{name},#{auditid},
     #{auditName},#{commitTime},#{beginTime},#{endTime},#{reason},
@@ -20,7 +20,7 @@
         UPDATE apply
         <set>
             <if test="applyState != null">
-                applystate=#{applyState},
+                applyState=#{applyState},
             </if>
             <if test="type != null">
                 `type`=#{type},
@@ -35,16 +35,16 @@
                 auditid=#{auditid},
             </if>
             <if test="auditName != null">
-                auditname=#{auditName},
+                auditName=#{auditName},
             </if>
             <if test="commitTime != null">
-                committime=#{commitTime},
+                commitTime=#{commitTime},
             </if>
             <if test="beginTime != null">
-                begintime=#{beginTime},
+                beginTime=#{beginTime},
             </if>
             <if test="endTime != null">
-                endtime=#{endTime},
+                endTime=#{endTime},
             </if>
             <if test="reason != null">
                 reason=#{reason},
@@ -56,7 +56,7 @@
                 receiverid=#{receiverid},
             </if>
             <if test="receiverName != null">
-                receivername=#{receiverName}
+                receiverName=#{receiverName}
             </if>
 
         </set>
@@ -66,7 +66,7 @@
                 userid=#{userid}
             </if>
             <if test="applyCode != null">
-                AND applycode=#{applyCode}
+                AND applyCode=#{applyCode}
             </if>
 
         </where>

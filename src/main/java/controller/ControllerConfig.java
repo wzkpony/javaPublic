@@ -12,7 +12,7 @@ public class ControllerConfig {
     /*
      * 登录
      */
-    public static String userName = "userName";
+    public static String userName = "name";
     public static String password = "password";
     public static String sex = "sex";
     public static String age = "age";
@@ -47,7 +47,7 @@ public class ControllerConfig {
     public static String receiverName = "receiverName";
     public static String applyCode = "applyCode";
     public static String interval = "interval";
-    public static String code = "code";
+
 
     /*
      * 签卡
@@ -62,6 +62,10 @@ public class ControllerConfig {
      * 请求返回
      */
     public static String mas = "mas";
+    /*
+    1.代表成功。0.代表失败
+     */
     public static String result = "result";
     public static String data = "data";
+    public static String code = "code";
 }

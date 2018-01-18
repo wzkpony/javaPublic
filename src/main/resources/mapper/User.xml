@@ -14,8 +14,8 @@
     <insert id="insertUser">
          INSERT INTO  `user`
          (
-         `name`,pwd,age,sex,idcard,staffnum,phone,department,
-         post,headimagepatch,telephone,mail,bossname,bossid
+         `name`,pwd,age,sex,idCard,staffNum,phone,department,
+         post,headImagePatch,telephone,mail,bossName,bossid
          )
          VALUES
          (
