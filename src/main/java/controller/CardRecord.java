@@ -26,14 +26,14 @@ public class CardRecord {
     {
         Map<String, Object> map_ = new HashMap<String, Object>();
 
-        int userid = Integer.parseInt(mapTimeCard.get("userid").toString());
-        int state = Integer.parseInt(mapTimeCard.get("state").toString());
-        String limits = mapTimeCard.get("limits").toString();
-        String location = mapTimeCard.get("location").toString();
-        int signType = Integer.parseInt(mapTimeCard.get("signType").toString());
+        int userid = Integer.parseInt(mapTimeCard.get(ControllerConfig.userid).toString());
+        int state = Integer.parseInt(mapTimeCard.get(ControllerConfig.state_).toString());
+        String limits = mapTimeCard.get(ControllerConfig.limits).toString();
+        String location = mapTimeCard.get(ControllerConfig.location).toString();
+        int signType = Integer.parseInt(mapTimeCard.get(ControllerConfig.signType).toString());
 
         cardRecordImp.insertTimeCrad(userid,state,limits,location,signType);
-        map_.put("mas","已签到");
+        map_.put(ControllerConfig.mas,"已签到");
         return map_;
     }
 

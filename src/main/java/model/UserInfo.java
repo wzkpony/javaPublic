@@ -7,7 +7,87 @@ public class UserInfo {
     private  Integer age;
     private  char sex;
     private  String idcard;
+    private  String staffNum;
+    private  String phone;
+    private  String department;
+    private  String post;
+    private  String headImagePatch;
+    private  String telephone;
+    private  String mail;
+    private  String bossName;
+    private  String bossid;
 
+    public String getStaffNum() {
+        return staffNum;
+    }
+
+    public void setStaffNum(String staffNum) {
+        this.staffNum = staffNum;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getPost() {
+        return post;
+    }
+
+    public void setPost(String post) {
+        this.post = post;
+    }
+
+    public String getHeadImagePatch() {
+        return headImagePatch;
+    }
+
+    public void setHeadImagePatch(String headImagePatch) {
+        this.headImagePatch = headImagePatch;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getBossName() {
+        return bossName;
+    }
+
+    public void setBossName(String bossName) {
+        this.bossName = bossName;
+    }
+
+    public String getBossid() {
+        return bossid;
+    }
+
+    public void setBossid(String bossid) {
+        this.bossid = bossid;
+    }
     public Integer getId() {
         return id;
     }

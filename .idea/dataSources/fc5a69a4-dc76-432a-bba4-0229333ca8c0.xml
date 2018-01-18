@@ -3058,25 +3058,29 @@
     <column id="686" parent="68" name="applystate">
       <Position>3</Position>
       <Comment>申请状态</Comment>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="687" parent="68" name="type">
       <Position>4</Position>
       <Comment>申请类型</Comment>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="688" parent="68" name="state">
       <Position>5</Position>
       <Comment>类型类别</Comment>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="689" parent="68" name="name">
       <Position>6</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="690" parent="68" name="auditid">
       <Position>7</Position>
@@ -3085,23 +3089,27 @@
     </column>
     <column id="691" parent="68" name="auditname">
       <Position>8</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="692" parent="68" name="committime">
       <Position>9</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="693" parent="68" name="begintime">
       <Position>10</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="694" parent="68" name="endtime">
       <Position>11</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="695" parent="68" name="reason">
       <Position>12</Position>
@@ -3110,8 +3118,9 @@
     </column>
     <column id="696" parent="68" name="interval">
       <Position>13</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="697" parent="68" name="receiverid">
       <Position>14</Position>
@@ -3120,13 +3129,15 @@
     </column>
     <column id="698" parent="68" name="receivername">
       <Position>15</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="699" parent="68" name="applycode">
       <Position>16</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <key id="700" parent="68" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -3437,70 +3448,80 @@
     </column>
     <column id="764" parent="77" name="name">
       <Position>2</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="765" parent="77" name="pwd">
       <Position>3</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="766" parent="77" name="age">
       <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="767" parent="77" name="sex">
       <Position>5</Position>
-      <DataType>char(1)|0</DataType>
+      <DataType>varchar(1)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="768" parent="77" name="idcard">
       <Position>6</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="769" parent="77" name="staffnum">
       <Position>7</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="770" parent="77" name="phone">
       <Position>8</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="771" parent="77" name="department">
       <Position>9</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="772" parent="77" name="post">
       <Position>10</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="773" parent="77" name="headiimagepatch">
+    <column id="773" parent="77" name="headimagepatch">
       <Position>11</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="774" parent="77" name="telephone">
       <Position>12</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="775" parent="77" name="mail">
       <Position>13</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="776" parent="77" name="bossname">
       <Position>14</Position>
-      <DataType>varchar(0)|0</DataType>
+      <DataType>varchar(125)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="777" parent="77" name="bossid">
       <Position>15</Position>

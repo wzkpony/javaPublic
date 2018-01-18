@@ -8,6 +8,19 @@ import org.apache.ibatis.annotations.Param;
 public interface SelectUser {
     public List<UserInfo>getSelectUser();
     public UserInfo getSelectForLogin(String name,String pwd);
-    public void insertUserForRegist(String name, String pwd, String sex,
-                                    String age, String idcard);
+
+    public  void  insertUserForRegist(String name,
+                                      String pwd,
+                                      String sex,
+                                      String age,
+                                      String idCard,
+                                      String staffNum,
+                                      String phone,
+                                      String department,
+                                      String post,
+                                      String headImagePatch,
+                                      String telephone,
+                                      String mail,
+                                      String bossName,
+                                      int bossid);
 }

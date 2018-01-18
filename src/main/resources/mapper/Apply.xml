@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="">
+<mapper namespace="mapper.ApplyMapper">
 
-    <insert id="">
-
-
+    <insert id="intsertApply">
+    INSERT INTO apply
+    (userid,applystate,`type`,state,`name`,auditid,
+    auditname,committime,begintime,endtime,reason,
+    `interval`,receiverid,receivername,applycode)
+    VALUES
+    (#{userid},#{applyState},#{type},#{state},#{name},#{auditid},
+    #{auditName},#{commitTime},#{beginTime},#{endTime},#{reason},
+    #{interval},#{receiverid},#{receiverName},#{applyCode})
     </insert>
 
-</mapper>>
+
+    <update id="updateApply">
+
+        UPDATE apply
+        <set>
+            <if test="applyState != null">
+                applystate=#{applyState},
+            </if>
+            <if test="type != null">
+                `type`=#{type},
+            </if>
+            <if test="state != null">
+                state=#{state},
+            </if>
+            <if test="name != null">
+                `name`=#{name},
+            </if>
+            <if test="auditid != null">
+                auditid=#{auditid},
+            </if>
+            <if test="auditName != null">
+                auditname=#{auditName},
+            </if>
+            <if test="commitTime != null">
+                committime=#{commitTime},
+            </if>
+            <if test="beginTime != null">
+                begintime=#{beginTime},
+            </if>
+            <if test="endTime != null">
+                endtime=#{endTime},
+            </if>
+            <if test="reason != null">
+                reason=#{reason},
+            </if>
+            <if test="interval != null">
+                `interval`=#{interval},
+            </if>
+            <if test="receiverid != null">
+                receiverid=#{receiverid},
+            </if>
+            <if test="receiverName != null">
+                receivername=#{receiverName}
+            </if>
+
+        </set>
+        <where>
+
+            <if test="userid != null">
+                userid=#{userid}
+            </if>
+            <if test="applyCode != null">
+                AND applycode=#{applyCode}
+            </if>
+
+        </where>
+
+    </update>
+</mapper>

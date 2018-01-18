@@ -3,17 +3,27 @@
 
 <mapper namespace="mapper.UserMapper">
 
-    <select id="selectusermapper" resultType="UserInfo"> SELECT * FROM user </select>
+    <select id="selectusermapper" resultType="UserInfo"> SELECT * FROM `user`</select>
 
     <!--<select id="selectusermapper" resultType="UserInfo"> SELECT * FROM user WHERE </select>-->
 
     <select id="selectusermapperForLogin" resultType="UserInfo" parameterType="String">
-       SELECT  * FROM  user WHERE name =#{name} AND pwd = #{pwd}
+       SELECT  * FROM `user` WHERE `name` =#{name} AND pwd = #{pwd}
     </select>
 
-    <insert id="insertUser"  parameterType="String">
-         INSERT INTO user (name, pwd,age,sex,idcard) VALUES (#{name}, #{pwd},#{age},#{sex},#{idcard});
+    <insert id="insertUser">
+         INSERT INTO  `user`
+         (
+         `name`,pwd,age,sex,idcard,staffnum,phone,department,
+         post,headimagepatch,telephone,mail,bossname,bossid
+         )
+         VALUES
+         (
+         #{name},#{pwd},#{age},#{sex},#{idCard},#{staffNum},#{phone},#{department},
+         #{post},#{headImagePatch},#{telephone},#{mail},#{bossName},#{bossid}
+         );
     </insert>
+
 
 
 </mapper>
