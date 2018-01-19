@@ -1,5 +1,7 @@
 package mapper;
 
+import java.util.List;
+import model.ApplyModel;
 import org.apache.ibatis.annotations.Param;
 
 public interface ApplyMapper {
@@ -36,5 +38,22 @@ public interface ApplyMapper {
                            @Param("receiverid") int receiverid,
                            @Param("receiverName") String receiverName,
                            @Param("applyCode") String applyCode);
+
+
+
+    public List<ApplyModel> selectApply(@Param("userid") int userid,
+                                        @Param("applyState") String applyState,
+                                        @Param("state") String state,
+                                        @Param("auditid") int auditid,
+                                        @Param("commitTime") String commitTime,
+                                        @Param("beginTime") String beginTime,
+                                        @Param("endTime") String endTime,
+                                        @Param("receiverid") int receiverid,
+                                        @Param("applyCode") String applyCode);
+
+
+
+
+
 
 }

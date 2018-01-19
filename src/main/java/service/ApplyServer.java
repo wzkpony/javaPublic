@@ -1,6 +1,7 @@
 package service;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import java.util.List;
+import model.ApplyModel;
 
 public interface ApplyServer {
     public boolean insertApplyServer(int userid,
@@ -33,5 +34,15 @@ public interface ApplyServer {
                                      int receiverid,
                                      String receiverName,
                                      String applyCode);
+
+    public List<ApplyModel> getSelectApplyServer(int userid,
+                                                 String applyState,
+                                                 String state,
+                                                 int auditid,
+                                                 String commitTime,
+                                                 String beginTime,
+                                                 String endTime,
+                                                 int receiverid,
+                                                 String applyCode);
     
 }

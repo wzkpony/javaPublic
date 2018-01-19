@@ -1,8 +1,8 @@
 package controller;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import javax.annotation.Resource;
+import model.ApplyModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import service.serviceimp.ApplyServerImp;
@@ -87,6 +87,72 @@ public class ApplyController {
             map.put(ControllerConfig.mas,"更改申请失败");
         }
         return map;
+    }
+
+    @RequestMapping(value = "/getApply",method = {RequestMethod.GET,RequestMethod.POST})
+    @ResponseBody
+    public Map<String,Object> getApplyFor(@RequestParam Map<String ,Object> mapApply){
+
+        Map<String,Object> map = new HashMap<String, Object>();
+
+        List<ApplyModel> listApply = new ArrayList<ApplyModel>();
+
+
+
+        int userid = 0;
+        if (getMapFor(mapApply,ControllerConfig.userid) != null)
+        {
+            userid =  Integer.parseInt(getMapFor(mapApply,ControllerConfig.userid));
+        }
+        int auditid = 0;
+        if (getMapFor(mapApply,ControllerConfig.auditid) != null)
+        {
+            auditid =  Integer.parseInt(getMapFor(mapApply,ControllerConfig.auditid));
+        }
+        int receiverid = 0;
+        if (getMapFor(mapApply,ControllerConfig.receiverid) != null)
+        {
+            receiverid =  Integer.parseInt(getMapFor(mapApply,ControllerConfig.receiverid));
+        }
+
+        String state = getMapFor(mapApply,ControllerConfig.state_);
+        String applyState = getMapFor(mapApply,ControllerConfig.applyState);
+        String commitTime = getMapFor(mapApply,ControllerConfig.commitTime);
+        String beginTime = getMapFor(mapApply,ControllerConfig.beginTime);
+        String endTime = getMapFor(mapApply,ControllerConfig.endTime);
+
+
+
+
+        String applyCode = getMapFor(mapApply,ControllerConfig.applyCode);
+
+        listApply = applyServerImp.getSelectApplyServer(userid,applyState,state,auditid,commitTime,beginTime,endTime,receiverid,
+                applyCode);
+        map.put(ControllerConfig.data,listApply);
+        if (listApply.size()>0)
+        {
+            map.put(ControllerConfig.code,"200");
+            map.put(ControllerConfig.mas,"查询成功");
+        }
+        else
+        {
+            map.put(ControllerConfig.code,"400");
+            map.put(ControllerConfig.mas,"暂无数据");
+
+        }
+        return map;
+
+    }
+
+    private String getMapFor(Map<String,Object> map,String keys)
+    {
+        String result = null;
+        if (map.get(keys) != null)
+        {
+          return  map.get(keys).toString();
+        }
+
+        return result;
     }
 
 }
