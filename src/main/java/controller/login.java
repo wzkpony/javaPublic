@@ -31,7 +31,7 @@ public class login {
      * 检测用户是否存在
      */
     @RequestMapping(value = "/doLogin", method = {RequestMethod.GET, RequestMethod.POST})
-    @ResponseBody
+    @ResponseBody//使用这个注解可以让接口在app端访问，而不是在网页中访问
     public Map<String, Object> getTeacher(@RequestParam Map<String,Object> mapApply) {
 
         String userName = mapApply.get(ControllerConfig.userName).toString();
