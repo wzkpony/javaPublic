@@ -12,7 +12,7 @@ public class ControllerConfig {
     /*
      * 登录
      */
-    public static String userName = "name";
+    public static String name = "name";
     public static String password = "password";
     public static String sex = "sex";
     public static String age = "age";

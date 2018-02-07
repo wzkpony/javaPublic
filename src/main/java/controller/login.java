@@ -34,7 +34,7 @@ public class login {
     @ResponseBody//使用这个注解可以让接口在app端访问，而不是在网页中访问
     public Map<String, Object> getTeacher(@RequestParam Map<String,Object> mapApply) {
 
-        String userName = mapApply.get(ControllerConfig.userName).toString();
+        String userName = mapApply.get(ControllerConfig.name).toString();
         String password = mapApply.get(ControllerConfig.password).toString();
         UserInfo userinfo = selectuserimp.getSelectForLogin(userName, password);
 
@@ -65,14 +65,14 @@ public class login {
     public Map<String, Object> userResgister(@RequestParam Map<String, Object> mapRes) {
 
         Map<String, Object> map_ = new HashMap<String, Object>();
-        UserInfo listmodel = selectuserimp.getSelectForLogin(mapRes.get(ControllerConfig.userName).toString(), mapRes
+        UserInfo listmodel = selectuserimp.getSelectForLogin(mapRes.get(ControllerConfig.name).toString(), mapRes
                 .get(ControllerConfig.password)
                 .toString());
         if (listmodel == null) {
 
             int bossid = Integer.parseInt(mapRes.get(ControllerConfig.bossid).toString());
             selectuserimp.insertUserForRegist(
-                    mapRes.get(ControllerConfig.userName).toString(),
+                    mapRes.get(ControllerConfig.name).toString(),
                     mapRes.get
                             (ControllerConfig.password).toString(),
                     mapRes.get(ControllerConfig.sex).toString(),
