@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="mapper.UserMapper">
-    /*
-    resultType 非链表查询的结果
+
+<!--
+    resultType 非链表查询的结果，指定的是单条的java对象，查询出来如果是多条则就是list<object>结合。
     resultMap 连标查询的结果
 
-    parameterType
-    */
+    parameterType 传入的参数名称
+
+    #{name} : 其中的name表示接收输入的参数，如果输入的是简单类型，#{}中的参数名可以任意，可以是value或者其他名称。
+
+    ${}：表示拼接sql串，将接收到的参数的内容，不加任何的修饰，拼接在sql中。使用会引起sql注入。
+
+    ${value}：接收输入参数的内容，如果传入的是简单类型，${}中只能是value。
+
+    selectOne：表示查询出一条数据记录进行映射，如果使用selectOne可以实现，自然也可以使用selectList来实现，
+            但是selectList只有一条记录
+
+    selectList：表示查询出一个列表数据，惊醒映射，如果使用selectList查询多条记录，不能使用selectOne。
+
+
+    SELECT LAST_INSERT_ID():得到刚执行插入记录的主键值，只使用与自增。
+
+    keyProperty：将查询到主建值设置到parameterType指定的对象的哪个属性。
+
+    order：SELECT LAST_INSERT_ID() AS id 执行顺序，相对于insert语句来说它的执行顺序.
+
+    useGeneratedKeys 取值范围true|false 默认值是：false。
+    含义：设置是否使用JDBC的getGenereatedKeys方法获取主键并赋值到keyProperty设置的领域模型属性中。
+
+    非自增主键返回（使用uuid）
+
+
+
+-->
+<mapper namespace="mapper.UserMapper">
 
     <select id="selectusermapper" resultType="UserInfo"> SELECT * FROM `user`</select>
+
 
     <!--<select id="selectusermapper" resultType="UserInfo"> SELECT * FROM user WHERE </select>-->
 
@@ -17,7 +45,10 @@
        SELECT  * FROM `user` WHERE `name` =#{name} AND pwd = #{pwd}
     </select>
 
-    <insert id="insertUser">
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
          INSERT INTO  `user`
          (
          `name`,pwd,age,sex,idCard,staffNum,phone,department,
